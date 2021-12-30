@@ -1,0 +1,140 @@
+﻿@{
+    Layout = "~/Views/Shared/Admin/_Layout.cshtml";
+}
+
+<div class="app-content pt-3 p-md-3 p-lg-4">
+    <div class="container-xl">
+        <div class="row g-3 mb-4 align-items-center justify-content-between">
+            <div class="col-auto">
+                <h1 class="app-page-title mb-0">Danh Sách Sản Phẩm</h1>
+            </div>
+            <div class="col-auto">
+                <div class="page-utilities">
+                    <div class="row g-2 justify-content-start justify-content-md-end align-items-center">
+                        <div class="col-auto">
+                            <form class="docs-search-form row gx-1 align-items-center">
+                                <div class="col-auto">
+                                    <input type="text" id="search-docs" name="searchdocs" class="form-control search-docs" placeholder="Tìm kiếm">
+                                </div>
+                                <div class="col-auto">
+                                    <button type="submit" class="btn app-btn-secondary">Tìm kiếm</button>
+                                </div>
+                            </form>
+
+                        </div>
+                        <!--//col-->
+                        <div class="col-auto">
+
+                            <select class="form-select w-auto">
+                                <option selected="" value="option-1">Tất cả</option>
+                                <option value="option-2"></option>
+                                <option value="option-3"></option>
+                                <option value="option-4"></option>
+                                <option value="option-5"></option>
+                                <option value="option-6"></option>
+
+                            </select>
+                        </div>
+                        <div class="col-auto">
+                            <a class="btn app-btn-primary" href="~/Admin/CreateShoes">
+                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-upload me-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />
+                                    <path fill-rule="evenodd" d="M7.646 1.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 2.707V11.5a.5.5 0 0 1-1 0V2.707L5.354 4.854a.5.5 0 1 1-.708-.708l3-3z" />
+                                </svg>Thêm sản phẩm
+                            </a>
+                        </div>
+                    </div>
+                    <!--//row-->
+                </div>
+                <!--//table-utilities-->
+            </div>
+            <!--//col-auto-->
+        </div>
+        <!--//row-->
+        <!--//col-->
+        <!--//col-->
+        <!--//end-->
+    </div>
+
+    <table class="table table-bordered">
+        <tr>
+
+            <th>
+                Tên sản phẩm
+            </th>
+            <th>
+                Loại
+            </th>
+            <th>
+                Kích thước
+            </th>
+            <th>
+                Giá
+            </th>
+            <th>
+                Số lượng
+            </th>
+            <th>
+                Mô tả
+            </th>
+            <th>
+                Hình ảnh
+            </th>
+            <th>
+                
+            </th>
+        </tr>
+
+        @foreach (var shoes in ViewBag.DanhSachGiay)
+        {
+    <tr>
+        
+        <td>
+            @shoes.Name
+        </td>
+        <td>
+            @shoes.Type
+        </td>
+        <td>
+            @shoes.Size
+        </td>
+        <td>
+            @shoes.Price
+        </td>
+        <td>
+            @shoes.Quantity
+        </td>
+        <td>
+            @shoes.Desciption
+        </td>
+        <td>
+            
+        </td>
+        <td>
+            @Html.ActionLink("Sửa", "EditShoes", new { shoes.ID })|
+            @Html.ActionLink("Chi tiết", "DetailsShoes", new { shoes.ID }) |
+            @Html.ActionLink("Xoá", "DeleteShoes", new { shoes.ID })
+        </td>
+    </tr>}
+
+    </table>
+
+    <!--//row-->
+    <nav class="app-pagination mt-5">
+        <ul class="pagination justify-content-center">
+            <li class="page-item disabled">
+                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+            </li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+                <a class="page-link" href="#">Next</a>
+            </li>
+        </ul>
+    </nav>
+    <!--//app-pagination-->
+</div>
+    <!--//container-fluid-->
+<!--//app-content-->
+<!--//app-footer-->

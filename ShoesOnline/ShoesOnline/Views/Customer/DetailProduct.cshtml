@@ -1,0 +1,448 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/Customer/_Layout.cshtml";
+}
+
+
+
+<!-- Open Content -->
+<section class="bg-dark">
+    <div class="container pb-5">
+        <div class="row">
+            <div class="col-lg-4 mt-5   ">
+                <div class="card mb-5">
+                    <img class="card-img img-fluid" src="assets/img/gallery/Airforce.jpg" alt="Card image cap"
+                         id="product-detail">
+                </div>
+                <div class="row">
+                    <!--Start Controls-->
+                    <div class="col-1 align-self-center">
+                        <a href="#multi-item-example" role="button" data-bs-slide="prev">
+                            <i class="text-dark fas fa-chevron-left"></i>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                    </div>
+                    <!--End Controls-->
+                    <!--Start Carousel Wrapper-->
+                    <div id="multi-item-example" class="col-10 carousel slide carousel-multi-item"
+                         data-bs-ride="carousel">
+                        <!--Start Slides-->
+                        <div class="carousel-inner product-links-wap" role="listbox">
+
+                            <!--First slide-->
+                            <div class="carousel-item active">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <a href="#">
+                                            <img class="card-img img-fluid" src="assets/img/gallery/Airforce.jpg"
+                                                 alt="Product Image 1">
+                                        </a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a href="#">
+                                            <img class="card-img img-fluid" src="assets/img/gallery/Airforce.jpg"
+                                                 alt="Product Image 2">
+                                        </a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a href="#">
+                                            <img class="card-img img-fluid" src="assets/img/gallery/Airforce.jpg"
+                                                 alt="Product Image 3">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/.First slide-->
+                            <!--Second slide-->
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <a href="#">
+                                            <img class="card-img img-fluid" src="assets/img/gallery/Airforce.jpg"
+                                                 alt="Product Image 4">
+                                        </a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a href="#">
+                                            <img class="card-img img-fluid" src="assets/img/gallery/Airforce.jpg"
+                                                 alt="Product Image 5">
+                                        </a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a href="#">
+                                            <img class="card-img img-fluid" src="assets/img/gallery/Airforce.jpg"
+                                                 alt="Product Image 6">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/.Second slide-->
+
+
+                        </div>
+                        <!--End Slides-->
+                    </div>
+                    <!--End Carousel Wrapper-->
+                    <!--Start Controls-->
+                    <div class="col-1 align-self-center">
+                        <a href="#multi-item-example" role="button" data-bs-slide="next">
+                            <i class="text-dark fas fa-chevron-right"></i>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                    <!--End Controls-->
+                </div>
+            </div>
+            <!-- col end -->
+            <div class="col-lg-7 mt-5">
+                <div class="card">
+                    <div class="card-body bg-dark text-light">
+                        <h1 class="h2">@ViewBag.Giay.Name</h1>
+                        <p class="h3 py-2">$@ViewBag.Giay.Price</p>
+                        <p class="py-2">
+                            <i class="fa fa-star text-warning"></i>
+                            <i class="fa fa-star text-warning"></i>
+                            <i class="fa fa-star text-warning"></i>
+                            <i class="fa fa-star text-warning"></i>
+                            <i class="fa fa-star text-secondary"></i>
+                            <span class="list-inline-item text-light">
+                                <a href="#" class="text-light"> More comments</a>
+                            </span>
+                        </p>
+                        <ul class="list-inline">
+                            <li class="list-inline-item">
+                                <h6>Brand:</h6>
+                            </li>
+                            <li class="list-inline-item">
+                                <p class="text-muted"><strong>Addidas</strong></p>
+                            </li>
+                        </ul>
+
+                        <h6>Description:</h6>
+                        <p>
+                            @ViewBag.Giay.Decription
+                        </p>
+
+
+                        <form action="" method="GET">
+                            <input type="hidden" name="product-title" value="Activewear">
+                            <div class="row">
+                                <div class="col-auto">
+                                    <ul class="list-inline pb-3">
+                                        <li class="list-inline-item">
+                                            <div class="dropdown">
+
+                                                <button style="border-radius: 16px;" class="btn btn-sm btn-outline-primary me-3 dropdown-toggle" type="button"
+                                                        id="dropdownMenuButtonColor" data-bs-toggle="dropdown"
+                                                        aria-expanded="false">
+                                                    Color
+                                                </button>
+
+                                                <ul class="dropdown-menu forcolor" aria-labelledby="dropdownMenuButtonColor">
+                                                    <li><a class="dropdown-item " href="#">Black</a></li>
+                                                    <li><a class="dropdown-item" href="#">White</a></li>
+                                                    <li><a class="dropdown-item" href="#">Blue</a></li>
+
+                                                </ul>
+                                            </div>
+                                        </li>
+
+                                        <li class="list-inline-item">
+                                            <div class="dropdown">
+                                                <button style="border-radius: 16px;" class="btn btn-sm btn-outline-primary me-3 dropdown-toggle" type="button"
+                                                        id="dropdownMenuButtonSize" data-bs-toggle="dropdown"
+                                                        aria-expanded="false">
+                                                    Size
+                                                </button>
+                                                <ul class="dropdown-menu forsize" aria-labelledby="dropdownMenuButtonSize">
+
+                                                    <li><a value="36" class="dropdown-item" href="#">36</a></li>
+                                                    <li><a value="37" class="dropdown-item" href="#">37</a></li>
+                                                    <li><a value="38" class="dropdown-item" href="#">38</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                                <div class="col-auto">
+                                    <ul class="list-inline pb-3">
+                                        <li class="list-inline-item text-right">
+                                            Quantity
+                                            <input type="hidden" name="product-quanity" id="product-quanity" value="1">
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span style="border-radius: 64px;" class="btn btn-sm btn-outline-primary ml-3"
+                                                  id="btn-minus">-</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span class="badge rounded-pill bg-secondary"
+                                                  id="var-value">1</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span style="border-radius: 64px;" class="btn btn-sm btn-outline-primary ml-3"
+                                                  id="btn-plus">+</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="row pb-3">
+                                <div class="col d-grid">
+
+                                    <button style="border-radius: 16px;" type="button" class="btn btn-sm btn-outline-primary me-3" name="submit"
+                                            data-bs-toggle="modal" data-bs-target="#checkOutModal" value="buy">
+                                        Buy Now
+                                    </button>
+                                </div>
+                                <div class="col d-grid">
+                                    <button style="border-radius: 16px;" type="button" class="btn btn-sm btn-outline-primary me-3" name="submit"
+                                            value="addtocard">
+                                        Add To Cart
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Close Content -->
+
+
+<!-- Start Article -->
+<!-- Stores -->
+<section class="py-0 pb-6" id="stores">
+    <div class="container">
+        <div class="row h-100">
+            <div class="col-lg-7 mt-7">
+                <h5 class="fs-3 fs-lg-5 lh-sm mb-0 text-uppercase">shoes</h5>
+            </div>
+            <div class="col-12">
+                <nav>
+                    <div class="nav nav-tabs watch-tabs mb-4 justify-content-end" id="nav-tab" role="tablist">
+                        <button class="nav-link active" id="nav-latest-tab" data-bs-toggle="tab"
+                                data-bs-target="#nav-latest" type="button" role="tab" aria-controls="nav-latest"
+                                aria-selected="true">
+                            LATEST
+                        </button>
+                        <button class="nav-link" id="nav-popular-tab" data-bs-toggle="tab" data-bs-target="#nav-popular"
+                                type="button" role="tab" aria-controls="nav-popular" aria-selected="false">
+                            POPULAR
+                        </button>
+                    </div>
+                </nav>
+
+                <div class="tab-content" id="nav-tabContent">
+                    <!-- =========================latest===================-->
+                    <div class="tab-pane fade show active" id="nav-latest" role="tabpanel"
+                         aria-labelledby="nav-latest-tab">
+                        <div class="carousel slide" id="carouselLatest" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active" data-bs-interval="10000">
+                                    <div class="row h-100 align-items-center">
+                                        <div class="col-sm-6 col-md-4 mb-3 mb-md-0">
+                                            <div class="card bg-black text-white p-6 pb-8 position-relative">
+                                                <img class="card-img" src="@ViewBag.Giay.ImagePath" alt="..." />
+                                                <div class="card-img-overlay bg-dark-gradient d-flex flex-column-reverse align-items-center">
+                                                    <h6 class="text-primary">
+                                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                                        $650.00
+                                                    </h6>
+                                                    <h4 class="text-light">ADRIATICA ADR</h4>
+                                                </div><a class="stretched-link" href="homr.html"></a>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-4 mb-3 mb-md-0">
+                                            <div class="card bg-black text-white p-6 pb-8 position-relative">
+                                                <img class="card-img" src="assets/img/gallery/Adidas3.jpg" alt="..." />
+                                                <div class="card-img-overlay bg-dark-gradient d-flex flex-column-reverse align-items-center">
+                                                    <h6 class="text-primary">
+                                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                                        $650.00
+                                                    </h6>
+                                                    <h4 class="text-light">ADRIATICA ADR</h4>
+                                                </div><a class="stretched-link" href="homr.html"></a>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-4 mb-3 mb-md-0">
+                                            <div class="card bg-black text-white p-6 pb-8 position-relative">
+                                                <img class="card-img" src="assets/img/gallery/Adidas3.jpg" alt="..." />
+                                                <div class="card-img-overlay bg-dark-gradient d-flex flex-column-reverse align-items-center">
+                                                    <h6 class="text-primary">
+                                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                                        $650.00
+                                                    </h6>
+                                                    <h4 class="text-light">ADRIATICA ADR</h4>
+                                                </div><a class="stretched-link" href="homr.html"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item" data-bs-interval="5000">
+                                    <div class="row h-100 align-items-center">
+                                        <div class="col-sm-6 col-md-4 mb-3 mb-md-0">
+                                            <div class="card bg-black text-white p-6 pb-8 position-relative">
+                                                <img class="card-img" src="assets/img/gallery/Adidas3.jpg" alt="..." />
+                                                <div class="card-img-overlay bg-dark-gradient d-flex flex-column-reverse align-items-center">
+                                                    <h6 class="text-primary">
+                                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                                        $650.00
+                                                    </h6>
+                                                    <h4 class="text-light">ADRIATICA ADR</h4>
+                                                </div><a class="stretched-link" href="homr.html"></a>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-4 mb-3 mb-md-0">
+                                            <div class="card bg-black text-white p-6 pb-8 position-relative">
+                                                <img class="card-img" src="assets/img/gallery/Adidas3.jpg" alt="..." />
+                                                <div class="card-img-overlay bg-dark-gradient d-flex flex-column-reverse align-items-center">
+                                                    <h6 class="text-primary">
+                                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                                        $650.00
+                                                    </h6>
+                                                    <h4 class="text-light">ADRIATICA ADR</h4>
+                                                </div><a class="stretched-link" href="homr.html"></a>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-4 mb-3 mb-md-0">
+                                            <div class="card bg-black text-white p-6 pb-8 position-relative">
+                                                <img class="card-img" src="assets/img/gallery/Adidas3.jpg" alt="..." />
+                                                <div class="card-img-overlay bg-dark-gradient d-flex flex-column-reverse align-items-center">
+                                                    <h6 class="text-primary">
+                                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                                        $650.00
+                                                    </h6>
+                                                    <h4 class="text-light">ADRIATICA ADR</h4>
+                                                </div><a class="stretched-link" href="homr.html"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselLatest"
+                                            data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon"
+                                              aria-hidden="true"></span><span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselLatest"
+                                            data-bs-slide="next">
+                                        <span class="carousel-control-next-icon"
+                                              aria-hidden="true"></span><span class="visually-hidden">
+                                            Next
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ====================popular========================-->
+                    <div class="tab-pane fade" id="nav-popular" role="tabpanel" aria-labelledby="nav-popular-tab">
+                        <div class="carousel slide" id="carouselPopular" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active" data-bs-interval="10000">
+                                    <div class="row h-100 align-items-center">
+                                        <div class="col-sm-6 col-md-4 mb-3 mb-md-0">
+                                            <div class="card bg-black text-white p-6 pb-8 position-relative">
+                                                <img class="card-img" src="assets/img/gallery/Adidas3.jpg" alt="..." />
+                                                <div class="card-img-overlay bg-dark-gradient d-flex flex-column-reverse align-items-center">
+                                                    <h6 class="text-primary">
+                                                        <i class="fa fa-shopping-cart text-warning lg"
+                                                           aria-hidden="true"></i>
+                                                        $650.00
+                                                    </h6>
+                                                    <h4 class="text-light">ADRIATICA ADR</h4>
+                                                </div><a class="stretched-link" href="~/Customer/"></a>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-4 mb-3 mb-md-0">
+                                            <div class="card bg-black text-white p-6 pb-8 position-relative">
+                                                <img class="card-img" src="assets/img/gallery/Adidas3.jpg" alt="..." />
+                                                <div class="card-img-overlay bg-dark-gradient d-flex flex-column-reverse align-items-center">
+                                                    <h6 class="text-primary">
+                                                        <i class="fa fa-shopping-cart text-warning -lg"
+                                                           aria-hidden="true"></i>
+                                                        $650.00
+                                                    </h6>
+                                                    <h4 class="text-light">ADRIATICA ADR</h4>
+                                                </div><a class="stretched-link" href="homr.html"></a>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-4 mb-3 mb-md-0">
+                                            <div class="card bg-black text-white p-6 pb-8 position-relative">
+                                                <img class="card-img" src="assets/img/gallery/Adidas3.jpg" alt="..." />
+                                                <div class="card-img-overlay bg-dark-gradient d-flex flex-column-reverse align-items-center">
+                                                    <h6 class="text-primary">
+                                                        <i class="fa fa-shopping-cart text-warning -lg"
+                                                           aria-hidden="true"></i>
+                                                        $650.00
+                                                    </h6>
+                                                    <h4 class="text-light">ADRIATICA ADR</h4>
+                                                </div><a class="stretched-link" href="homr.html"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item" data-bs-interval="5000">
+                                    <div class="row h-100 align-items-center">
+                                        <div class="col-sm-6 col-md-4 mb-3 mb-md-0">
+                                            <div class="card bg-black text-white p-6 pb-8 position-relative">
+                                                <img class="card-img" src="assets/img/gallery/Adidas3.jpg" alt="..." />
+                                                <div class="card-img-overlay bg-dark-gradient d-flex flex-column-reverse align-items-center">
+                                                    <h6 class="text-primary">
+                                                        <i class="fa fa-shopping-cart text-warning -lg"
+                                                           aria-hidden="true"></i>
+                                                        $650.00
+                                                    </h6>
+                                                    <h4 class="text-light">ADRIATICA ADR</h4>
+                                                </div><a class="stretched-link" href="homr.html"></a>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-4 mb-3 mb-md-0">
+                                            <div class="card bg-black text-white p-6 pb-8 position-relative">
+                                                <img class="card-img" src="assets/img/gallery/Adidas3.jpg" alt="..." />
+                                                <div class="card-img-overlay bg-dark-gradient d-flex flex-column-reverse align-items-center">
+                                                    <h6 class="text-primary">
+                                                        <i class="fa fa-shopping-cart text-warning -lg"
+                                                           aria-hidden="true"></i>
+                                                        $650.00
+                                                    </h6>
+                                                    <h4 class="text-light">ADRIATICA ADR</h4>
+                                                </div><a class="stretched-link" href="homr.html"></a>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-4 mb-3 mb-md-0">
+                                            <div class="card bg-black text-white p-6 pb-8 position-relative">
+                                                <img class="card-img" src="assets/img/gallery/Adidas3.jpg" alt="..." />
+                                                <div class="card-img-overlay bg-dark-gradient d-flex flex-column-reverse align-items-center">
+                                                    <h6 class="text-primary">
+                                                        <i class="fa fa-shopping-cart text-warning -lg"
+                                                           aria-hidden="true"></i>
+                                                        $650.00
+                                                    </h6>
+                                                    <h4 class="text-light">ADRIATICA ADR</h4>
+                                                </div><a class="stretched-link" href="homr.html"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <button class="carousel-control-prev" type="button"
+                                            data-bs-target="#carouselPopular" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button"
+                                            data-bs-target="#carouselPopular" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>  
