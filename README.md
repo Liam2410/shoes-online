@@ -14,6 +14,7 @@ Tên branch: main Thắng Trang Duy
   * **git checkout tên_branch** (lệnh này để chuyển branch tùy ý)
   * **git pull origin tên_branch** (lệnh này lấy project ở các branch tùy ý)
 * Những lần sau (đã tải project) pull code về máy
+  * **cd tên_thư_mục_code**
   * **git pull origin tên_branch**
 * Lệnh push code lên branch
   * **git add .**
