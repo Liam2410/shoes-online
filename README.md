@@ -19,5 +19,7 @@ Tên branch: main Thắng Trang Duy
   * **git add .**
   * **git commit -m 'Nội dung đã chỉnh sửa gì'**
   * **git push origin tên_branch**
+## Lưu ý
+* File database nằm trong thư mục code
 ## Note
 https://docs.google.com/document/d/17XDecdNIuN1e6QT3bQijfLQHM3CVpPDKGkAJZ4j8NAs/edit#heading=h.5e6p36r4bl3o
