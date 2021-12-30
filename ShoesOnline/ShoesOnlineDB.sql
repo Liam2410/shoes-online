@@ -114,3 +114,21 @@ CREATE TABLE News(
 	NewsReleaseDate DATE NOT NULL DEFAULT GETDATE(),
 	NewsCategory NVARCHAR(512) NOT NULL --Xu hướng, Ưu đãi, Sự kiện, Giới thiệu
 )
+
+
+CREATE TABLE PendingShoes(
+	ID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+	Name NVARCHAR(512) NOT NULL,
+	Type VARCHAR(512) NOT NULL,
+	Price INT NOT NULL,
+	Quantity INT NOT NULL,
+	Size NVARCHAR(512) NOT NULL,
+	Color NVARCHAR(512) NOT NULL,
+	Desciption NTEXT NOT NULL,
+	ImagePath NVARCHAR(512) DEFAULT NULL, --Ảnh đại diện của sản phẩm
+)
+
+CREATE TABLE PendingShoesImage(
+	IDShoes INT FOREIGN KEY REFERENCES Shoes(ID),
+	AllImagePath NVARCHAR(512) DEFAULT NULL
+)
